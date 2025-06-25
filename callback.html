@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Authorization Callback</title>
+</head>
+<body>
+  <h2>✅ Код авторизации получен!</h2>
+  <p>Вот ваш code:</p>
+  <pre id="code"></pre>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const code = params.get("code");
+    document.getElementById("code").textContent = code ?? "Код не найден.";
+  </script>
+</body>
+</html>
+callback.html
